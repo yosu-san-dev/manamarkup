@@ -40,7 +40,7 @@ document.querySelector(".btn1").addEventListener
 
         const engagementRate = ((totalLikes + totalComments) / (followers * posts.length)) * 100;
 
-        alert(`Engagement Rate: ${engagementRate.toFixed(2)}%`);
+        document.getElementById("result-box").textContent = engagementRate.toFixed(2);
 
     } 
     catch (error) 
