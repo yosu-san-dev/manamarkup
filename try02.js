@@ -1,5 +1,4 @@
-document.querySelector(".btn1").addEventListener
-("click", async () => {
+document.querySelector(".btn1").addEventListener("click", async () => {
     const username = document.querySelector(".text-input1").value.trim();
     if (!username) {
         document.getElementById("engagement-output").innerText = `${engagementRate.toFixed(2)}%`;
@@ -31,8 +30,7 @@ document.querySelector(".btn1").addEventListener
         let totalLikes = 0;
         let totalComments = 0;
 
-        posts.forEach(post => 
-        {
+        posts.forEach(post => {
             const node = post.node;
             totalLikes += node.edge_liked_by?.count || 0;
             totalComments += node.edge_media_to_comment?.count || 0;
