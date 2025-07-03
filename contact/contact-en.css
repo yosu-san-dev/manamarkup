@@ -1,0 +1,406 @@
+/*
+Color Palette:
+#0B1D51 - Dark Blue
+#725CAD - Purple
+#8CCDEB - Light Blue
+#FFE3A9 - Soft Yellow
+*/
+
+/* =============================== */
+/* Base Styles */
+/* =============================== */
+
+body,
+.body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    color: #0B1D51;
+}
+
+h1, h2, h3, h4, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =============================== */
+/* Overlay */
+/* =============================== */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    display: none;
+}
+
+/* =============================== */
+/* Side Panel */
+/* =============================== */
+
+  
+.trigger-btn {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #725CAD;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+  
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fdfdfd;
+    box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+  
+.side-panel.open {
+    right: 0;
+}
+  
+.panel-content {
+    padding: 20px;
+}
+  
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* =============================== */
+/* Header */
+/* =============================== */
+
+.logo-icon {
+    background-color: #f2edff;
+    border-radius: 0px 0px 15px 15px;
+    padding: 10px;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.main-header {
+    color: #f2edff;
+    padding:  0px 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0px 75px;
+}
+
+.header-left {
+    margin-right: 25px;
+    width: 44px;
+}
+
+.header-left,
+.logo {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+  
+.header-center a,
+.header-right a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+  
+.header-center {
+    flex: 1;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #2e244a;
+    border-radius: 0px 0px 15px 15px;
+    padding: 6px 10px;
+
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    gap: 20px;
+}
+
+.language-selector {
+    position: relative;
+}
+
+#lang-btn, .btn-2 {
+    background-color: #2e244a;
+    border-radius: 0px 0px 10px 10px;
+    padding: 6px 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#lang-btn:hover, .btn-2:hover {
+    background-color: #725CAD;
+}
+
+#lang-btn:active, .btn-2:active {
+    background-color: #f2edff;
+    color: #2e244a;
+}
+  
+.lang-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    color: black;
+    min-width: 100px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.lang-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+  
+.lang-menu a:hover {
+    background-color: #f2f2f2;
+}
+
+.link-2:hover {
+    color: #725CAD;
+}
+
+.container-5 {
+    display: none;
+    
+}
+
+/* =============================== */
+/* Contact */
+/* =============================== */
+
+.contact-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #725CAD;
+    border-radius: 15px;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+.contact-header h2 {
+    font-size: 32px;
+    color: #0B1D51;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+     text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0B1D51;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a0a3b5;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #fff;
+    color: #333;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #725CAD;
+    box-shadow: 0 0 5px rgba(114, 92, 173, 0.4);
+}
+
+#name, #email, #phone, #message {
+    width: 97%;
+}
+
+.btn-1{
+    color: white;
+    border: none;
+    background-color: #725CAD;
+    border-radius: 8px;
+    padding: 10px 24px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-1:hover {
+    opacity: 0.7;
+}
+
+/* =============================== */
+/* Footer */
+/* =============================== */
+
+.footer {
+    background-color: #453869;
+    color: #f2edff;
+}
+
+.container-4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.span-3 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.span-holder-3 {
+    padding: 0px 0px 15px 0px;
+}
+
+.p-4 {
+    font-size: 14px;
+}
+
+.about-sum,
+.terms,
+.credit,
+.mail {
+    width: 270px;
+    padding: 15px;
+}
+
+.link-1 {
+    color: #a0a3b5;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.mail-input {
+    width: 90%;
+    padding: 10px;
+    background-color: #f2edff;
+    outline: none;
+    border: 0px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.icon-2 {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-2:hover {
+    cursor: pointer;
+}
+
+/* =============================== */
+/* Media Queries */
+/* =============================== */
+
+@media (max-width: 860px) {
+
+    /* -- Header -- */
+    .container-5 {
+        display: flex;
+        font-weight: 700;
+        color: #f2edff;
+        justify-content: right;
+        flex: 1;
+    }
+
+    .side-panel {
+        display: block;
+    }
+
+    .header-right {
+        display: none;
+    }
+}
+
+@media (max-width: 570px) {
+
+    /* -- Header -- */
+
+    .header-center {
+    display: none;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    /* -- Header -- */
+    
+    .header-center {
+        height: 38px;
+        align-items: center;
+    }
+
+    .btn-2 {
+        height: 50px;
+    }
+}
